@@ -6,12 +6,21 @@
 // class User(var email: String = "George") {...}
 
 // OPTION 03 - without default value + implicit constructor word - expects variable value
-class User(var userName: String) {
+class User(var userName: String, var isAdmin: Boolean) {
     //    PROPERTIES
     var email: String = ""
     var password: String = ""
     var firstName: String = ""
     var lastName: String = ""
+
+    //    CONSTRUCTOR OVERLOADING
+    constructor(userName: String) : this(userName, false) { // primary constructor call necessary here!!
+        println("CONSTRUCTOR 2: $userName | $isAdmin")
+    }
+
+    constructor() : this("unknown", false) {
+        println("CONSTRUCTOR 3: $userName | $isAdmin")
+    }
 
     //    GETTERS
     fun getUserEmail(): String {
