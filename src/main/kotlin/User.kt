@@ -1,12 +1,24 @@
-    // CONSTRUCTORS (declaration completely different from Java)
-    // OPTION 01 - without default value + explicit constructor word
-    // class User constructor(var email: String) {...}
+// CONSTRUCTORS (declaration completely different from Java)
 
-    // OPTION 02 - with default value + implicit constructor word
-    // class User(var email: String = "George") {...}
+// OPTION 01 - without default value + explicit constructor word
+// class User constructor(var email: String) {...}
 
-    // OPTION 03 - without default value + implicit constructor word - expects variable value
+// OPTION 02 - with default value + implicit constructor word
+// class User(var email: String = "George") {...}
+
+// OPTION 03 - without default value + implicit constructor word - expects variable value
 class User(var firstName: String, var lastName: String) {
+    // INIT BLOCKS
+    // Is executed after the primary constructor (possible to have more than one)
+    // Different from constructors they order matters
+    init {
+        println("INIT BLOCK 1")
+    }
+
+    init {
+        println("INIT BLOCK 2")
+    }
+
     //    PROPERTIES
     var email: String = ""
     var password: String = ""
