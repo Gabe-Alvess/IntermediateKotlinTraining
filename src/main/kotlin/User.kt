@@ -1,25 +1,24 @@
-// CONSTRUCTORS (declaration completely different from Java)
-// OPTION 01 - without default value + explicit constructor word
-// class User constructor(var email: String) {...}
+    // CONSTRUCTORS (declaration completely different from Java)
+    // OPTION 01 - without default value + explicit constructor word
+    // class User constructor(var email: String) {...}
 
-// OPTION 02 - with default value + implicit constructor word
-// class User(var email: String = "George") {...}
+    // OPTION 02 - with default value + implicit constructor word
+    // class User(var email: String = "George") {...}
 
-// OPTION 03 - without default value + implicit constructor word - expects variable value
-class User(var userName: String, var isAdmin: Boolean) {
+    // OPTION 03 - without default value + implicit constructor word - expects variable value
+class User(var firstName: String, var lastName: String) {
     //    PROPERTIES
     var email: String = ""
     var password: String = ""
-    var firstName: String = ""
-    var lastName: String = ""
+    var userName: String = ""
 
     //    CONSTRUCTOR OVERLOADING
-    constructor(userName: String) : this(userName, false) { // primary constructor call necessary here!!
-        println("CONSTRUCTOR 2: $userName | $isAdmin")
+    constructor(firstName: String) : this(firstName, "unknown") { // primary constructor call necessary here!!
+        println("CONSTRUCTOR 2: $firstName | $lastName")
     }
 
-    constructor() : this("unknown", false) {
-        println("CONSTRUCTOR 3: $userName | $isAdmin")
+    constructor() : this("unknown", "unknown") {
+        println("CONSTRUCTOR 3: $firstName | $lastName")
     }
 
     //    GETTERS

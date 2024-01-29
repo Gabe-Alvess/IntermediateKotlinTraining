@@ -6,15 +6,16 @@ fun main() {
     // Instances of model class user
     // Adding var values through constructors
     line("constructors")
-    var userA = User("tiago#01", true) // Constructor 01
-    var userB = User("robert#01") // Constructor 02
+    var userA = User("Tiago", "Aguiar") // Constructor 01
+    var userB = User("Robert") // Constructor 02
     var userC = User() // Constructor 03
 
     // Adding var values through property call
-    userA.firstName = "Tiago"
-    userB.firstName = "Robert"
-    userC.firstName = "Joseph"
-    userC.email = "gabriel.webdev@hotmail.com"
+    userA.email = "tiago.aguiar@hotmail.com"
+    userB.lastName = "Lewandowski"
+    userB.password = "number9"
+    userC.firstName = "Gabriel"
+    userC.userName = "Gabe-Alvess"
 
     line("functions")
     // Calling User class functions
@@ -29,7 +30,7 @@ fun main() {
 
     line("get functions")
     // Calling User class get functions
-    var email = userC.getUserEmail()
+    var email = userA.getUserEmail()
     println(email)
     var nameLength = userC.getFirstNameLength()
     println(nameLength)
