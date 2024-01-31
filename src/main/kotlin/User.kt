@@ -15,9 +15,16 @@ class User(var firstName: String, var lastName: String) {
 
     // COMPANION OBJECT - (The scope where you can declare class properties or class functions in Kotlin) - (static properties and static methods in terms of Java)
     var count = 0 // Object count variable
+
+    val MAX_NAME_LENGTH = 8 // This way it will be declared every time for each instance of this class
     companion object {
         // CLASS PROPERTIES - Each property declared here will be shared with all instances of this class (The properties will be the same for each instance of this class)
         var count = 0 // Class count variable / same as static count variable
+
+        // CONSTANT VARIABLE DECLARATION KOTLIN
+        // CONST - used to declare compilation time constant variables - (value will be assigned immediately after writing the value)
+        // VAL - used to declare execution time constant variables - (value will be assigned only after executing the code)
+        const val MAX_NAME_LENGTH = 8 // This way it will be declared once for all instances of this class
 
         fun resetCount() { // class function / same as static method
             count = 0
