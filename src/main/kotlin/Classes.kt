@@ -1,14 +1,15 @@
 fun main() {
     // MODEL (TEMPLATE)
-    // Class (Model responsible for the creation of multiple objects through properties)
-    // Object (Object is the instance "creation" of something real through the model class)
+    // Class (Model responsible for the creation of multiple objects through properties and behaviors)
+    // Object (Object is the instance "creation" of an object through the model class)
 
-    // Instances of model class user
+    // User model class instances
     // Adding var values through constructors
     line("constructors")
-    var userA = User("Tiago", "Aguiar") // Constructor 01
-    var userB = User("Robert") // Constructor 02
-    var userC = User() // Constructor 03
+    val userA = User("Tiago", "Aguiar") // Constructor 01
+    val userB = User("Robert") // Constructor 02
+    User.resetCount() // class function call / same as static method call in Java
+    val userC = User() // Constructor 03
 
     // Adding var values through property call
     userA.email = "tiago.aguiar@hotmail.com"
@@ -18,21 +19,21 @@ fun main() {
     userC.userName = "Gabe-Alvess"
 
     line("functions")
-    // Calling User class functions
+    // Calling User object functions
     userA.sayHelloToUser()
     userB.sayHelloToUser()
     userC.sayHelloToUser()
 
     line("set functions")
-    // Calling User class set functions
+    // Calling User object set functions
     userA.setNewName("Jhon")
     userA.sayHelloToUser()
 
     line("get functions")
-    // Calling User class get functions
-    var email = userA.getUserEmail()
+    // Calling User object get functions
+    val email = userA.getUserEmail()
     println(email)
-    var nameLength = userC.getFirstNameLength()
+    val nameLength = userC.getFirstNameLength()
     println(nameLength)
 
     // Another practical model class example

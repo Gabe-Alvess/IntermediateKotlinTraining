@@ -1,4 +1,5 @@
 class Calculator() {
+    // Private keyword changes the visibility of a variable or function. Like in java they can only be accessed or modified inside the class
     private var number1 = 0
     private var number2 = 0
     private var result = 0
