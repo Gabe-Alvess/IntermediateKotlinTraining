@@ -6,7 +6,7 @@ fun main() {
     // User model class instances
     // Adding var values through constructors
     line("constructors")
-    val userA = User("Tiago", "Aguiar") // Constructor 01
+    val userA = User("Tiago", true) // Constructor 01
     val userB = User("Robert") // Constructor 02
     User.resetCount() // class function call / same as static method call in Java
     val userC = User() // Constructor 03
@@ -44,6 +44,12 @@ fun main() {
     buttonSuccess.color = "00FF00"
     buttonCancel.text = "Cancel"
     buttonCancel.color = "FF0000"
+
+    // Late variable initialization
+    line("late var init")
+    val user = User("Diogo", true)
+    user.lastName = "Aguiar"
+    user.output()
 }
 
 fun line(title: String) {
