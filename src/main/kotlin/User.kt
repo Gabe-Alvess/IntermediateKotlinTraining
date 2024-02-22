@@ -33,11 +33,11 @@ class User(var firstName: String, var lastName: String) {
 
     //    CONSTRUCTOR OVERLOADING
     constructor(firstName: String) : this(firstName, "unknown") { // primary constructor call necessary here!!
-        println("CONSTRUCTOR 2: $firstName | $lastName")
+//        println("CONSTRUCTOR 2: $firstName | $lastName")
     }
 
     constructor() : this("unknown", "unknown") {
-        println("CONSTRUCTOR 3: $firstName | $lastName")
+//        println("CONSTRUCTOR 3: $firstName | $lastName")
     }
 
     // INIT BLOCKS
@@ -46,8 +46,8 @@ class User(var firstName: String, var lastName: String) {
     init {
         count++ // Object var count call
         User.count++ // Class var count call - Like calling static variables in java
-        println("object count: $count")
-        println("class count: ${User.count}")
+//        println("object count: $count")
+//        println("class count: ${User.count}")
     }
 
     //    GETTERS
